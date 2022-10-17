@@ -25,7 +25,7 @@ function SignUp() {
         window.location = "home.html";
     })
     .catch(function(error) {
-        alert("พิม Email or Password ผิด");
+        alert("กรอก Email หรือ Password ไม่ถูกต้อง");
     }); 
 
 
