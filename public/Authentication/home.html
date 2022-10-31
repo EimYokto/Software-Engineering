@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>EA Dashboard</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,40 +33,52 @@
             
             <ul class="list-unstyled components">
                 <!--<p>Old man</p>-->
+                <li>
+                    <a href="home.html">Dashboard</a>
+                </li>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Business</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">กระบวนการนักศึกษา</a>
+                            <a href="work.html">เอกสารที่เกี่ยวข้อง</a>
                         </li>
                         <li>
-                            <a href="#">กระบวนการอาจารย์</a>
+                            <a href="allwork.html">ระบบงานทั้งหมด</a>
                         </li>
                         <li>
-                            <a href="#">กระบวนการอื่นๆ</a>
+                            <a href="enterpriseandnaturework.html">ระบบงานการองค์กรและธรรมชาติ</a>
+                        </li>
+                        <li>
+                            <a href="mainwork.html">ระบบงานหลัก</a>
+                        </li>
+                        <li>
+                            <a href="supportwork.html">ระบบงานสนับสนุน</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Application</a>
+                    <a href="Application.html">Application</a>
                 </li>
                 <li>
-                    <a href="#">Data</a>
+                    <a href="data.html">Data</a>
                 </li>
                 <li>
-                    <a href="#">Techolgy</a>
+                    <a href="technology.html">Technology</a>
                 </li>
                 <li class="active">
-                    <a href="#Ralation_TableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ralation Table</a>
+                    <a href="#Ralation_TableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Relation Table</a>
                     <ul class="collapse list-unstyled" id="Ralation_TableSubmenu">
                         <li>
-                            <a href="#">Business</a>
+                            <a href="rt_Bussiness.html">Business</a>
                         </li>
                         <li>
-                            <a href="#">Application</a>
+                            <a href="rt_Application.html">Application</a>
                         </li>
                         <li>
-                            <a href="#">Data</a>
+                            <a href="rt_Data.html">Data</a>
+                        </li>
+                        <li>
+                            <a href="rt_Technology.html">Technology</a>
                         </li>
                     </ul>
                 </li>
@@ -92,24 +104,30 @@
                     </div>
                 </div>
             </nav>
-            <h2>&nbspEA Admin Enterprise</h2>
-            <p>&nbsp&nbsp&nbsp&nbsp&nbsp เริ่มจากตรงนี้</p>
+            <h2>&nbspEA Admin Dashboard</h2>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp หน้า Dashboard</p>
         </div>
         
       </div>
 
-
-
-
-
-    
-
-
-
+    <script type="text/JavaScript">
+        $(document).ready(function() {
+    $('#example').DataTable( {
+        
+    } );
+    } );
+    </script>
     <script src="/__/firebase/8.3.2/firebase-app.js"></script>
     <script src="/__/firebase/8.3.2/firebase-auth.js"></script>
     <script src="/__/firebase/init.js?useEmulator=true"></script>
 
+    <script type="text/JavaScript"src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+    <script type="text/JavaScript"src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
+    <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
+    <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script>
+    <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js" ></script>
+    <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js" ></script>
+  
 
     <script src="./js/auth_functions.js"></script>
     <script src="./js/logout.js"></script>

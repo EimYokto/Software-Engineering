@@ -1,4 +1,4 @@
 const db = firebase.database();
 
-const TABLE = "/EA";
+const TABLE = "/Bussiness";
 
