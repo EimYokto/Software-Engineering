@@ -22,8 +22,16 @@
           <input type="text" name="ID" id="ID" class="form-control-sm"/>
       </div>
       <div class="form-group">
-          <label for="Name">ชื่อกระบวนการทำงาน</label>
-          <input type="text" name="Name" id="Name" class="form-control-sm"/>
+          <label for="Name" class="form-label">ชื่อกระบวนการทำงาน</label>
+          <select name="Name" id="Name" class="form-select">
+            <option value="-">-</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+
+          <!-- <input type="text" name="Name" id="Name" class="form-control-sm"/> -->
+
       </div>
       <div class="form-group">
           <label for="Type">ประเภทกระบวนการทำงาน</label>

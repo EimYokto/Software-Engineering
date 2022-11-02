@@ -2,7 +2,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const ID = urlParams.get('ID');
 
-db.ref(TABLE + "/" + ID).once('value')
+// db.ref(TABLE + "/" + ID).once('value')
+db.ref(TABLE).child(ID).once('value')
 .then((snapshot) => {
   var result = snapshot.val();
   document.getElementById("ID").value = result.ID;
@@ -28,7 +29,7 @@ function edit() {
     const Detail = document.getElementById('Detail').value;
     const responsible = document.getElementById('responsible').value;
 
-    db.ref(TABLE).push({"ID":ID,"Name":Name,"Type":Type,"System":System,"Application":Application,"Version":Version,"Detail":Detail,"responsible":responsible})    
+    db.ref(Bussiness_1).push({"ID":ID,"Name":Name,"Type":Type,"System":System,"Application":Application,"Version":Version,"Detail":Detail,"responsible":responsible})    
     .then(() => {
         alert("Edit data successfully");
       window.location = "/Authentication/home.html";

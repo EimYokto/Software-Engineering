@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Edit</title>
+    <title>Insert</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,21 +16,15 @@
   </head>
   <body>
     <div class="container">
-      <h2>Edit Data Bussiness</h2><p></p>
-      <input type="hidden" name="ID" id="ID"/>
+      <h2>Add MasterData</h2><p></p>
+      <!-- Bussiness -------------------------------------------------------------------->
       <div class="form-group">
           <label for="ID">หมายเลขกระบวนการทำงาน</label>
           <input type="text" name="ID" id="ID" class="form-control-sm"/>
       </div>
       <div class="form-group">
           <label for="Name">ชื่อกระบวนการทำงาน</label>
-          <select name="Name" id="Name" class="form-select">
-            <option value="-">-</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
-          <!-- <input type="text" name="Name" id="Name" class="form-control-sm"/> -->
+          <input type="text" name="Name" id="Name" class="form-control-sm"/>
       </div>
       <div class="form-group">
           <label for="Type">ประเภทกระบวนการทำงาน</label>
@@ -56,10 +50,37 @@
         <label for="responsible">ผู้รับผิดชอบ</label>
         <input type="text" name="responsible" id="responsible" class="form-control-sm"/>
       </div>
-        <a href="/" class="btn btn-sm btn-danger">Cancel</a>
-        <button class="btn btn-sm btn-primary" onclick="edit();">Edit Data</button>
-        
+   
+      <!-- App ------------------------------------------------------------------------------------------------->
+      <div class="form-group">
+        <label for="Language">ภาษาที่ใช้พัฒนา</label>
+        <input type="text" name="Language" id="Language" class="form-control-sm"/>
       </div>
+      <div class="form-group">
+        <label for="Data">ฐานข้อมูล</label>
+        <input type="text" name="Data" id="Data" class="form-control-sm"/>
+    </div>
+    <div class="form-group">
+        <label for="Bussiness">กระบวนการทำงานที่เกี่ยวข้อง</label>
+        <input type="text" name="Bussiness" id="Bussiness" class="form-control-sm"/>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <button class="btn btn-sm btn-primary" onclick="insertTable();">Add New Data</button>
+  </div>
 
 
 
@@ -68,12 +89,8 @@
 <script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
 <script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
 <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
-
-<script src="/__/firebase/8.3.2/firebase-app.js"></script>
-<script src="/__/firebase/8.3.2/firebase-database.js"></script>
-
 <script  src="/__/firebase/init.js?useEmulator=true"></script>
 <script  src="./Authentication/js/config.js"></script>
-<script src="./Authentication/js/edit.js"></script>
+<script  src="./Authentication/js/insert.js"></script>
   </body>
 </html>
