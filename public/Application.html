@@ -7,16 +7,36 @@
         <title>Application</title>
         
     
-        <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="style.css">
-    
-        <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+        <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     </head>
 
     <body style="background-color: #E9EFFB;">
@@ -91,7 +111,26 @@
                     </div>
                 </nav>
                 <h2>&nbspApplication</h2>
-                <p>&nbsp&nbsp&nbsp&nbsp&nbsp เริ่มจากตรงนี้</p>
+                <table id="example" class="display nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>หมายเลขระบบสารสนเทศ</th>
+                            <th>ชื่อกระบวนการทำงาน</th>
+                            <th>ภาษาที่ใช้พัฒนา</th>
+                            <th>ฐานข้อมูล</th>
+                            <th>ปี</th>
+                            <th>กระบวนการทำงานที่เกี่ยวข้อง</th>
+                            <th>หน่วยงานที่เกี่ยวข้อง</th>
+                            <th>รายละเอียดเพิ่มเติม</th>
+                            <th>เวอร์ชั่นของระบบสารสนเทศ</th>
+                            <th>ผู้รับผิดชอบ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tdata1">
+                        
+                    </tbody>
+    
+                </table>
                 
                 
 
@@ -102,33 +141,36 @@
             </div>
             
         </div>
-        <script type="text/JavaScript">
+        <!-- <script type="text/JavaScript">
             $(document).ready(function() {
         $('#example').DataTable( {
             
         } );
         } );
-        </script>
-        <script type="text/JavaScript"src="https://code.jquery.com/jquery-3.5.1.js" ></script>
-        <script type="text/JavaScript"src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
-        <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js" ></script>
-        <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js" ></script>
-        
-    
-    
-    
-    
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        </script> -->
+          <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <script type="text/JavaScript"src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js" ></script>
+
+  <script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+  <script  src="/__/firebase/init.js?useEmulator=true"></script>
+  <script src="./Authentication/js/config.js"></script>
+  <script src="./Authentication/js/pulldata.js"></script>
 
 </body>
 </html>

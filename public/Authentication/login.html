@@ -47,7 +47,9 @@
     
                       <div class="pt-3 mb-4">
                         <button class="btn btn-dark btn-lg btn-block" id="btnLogin"type="button">Login</button>
+                        <button class="btn btn-light btn-lg btn-block" id="goBack"type="button">Cancel</button>
                       </div>
+                      
                       <div  style="text-align: center;">
                         <a class="small text-muted" href="./Reset_Password.html">Forgot your password?</a>
                       </div>
@@ -61,11 +63,27 @@
       </div>
     </section>
     <script>
+      const goBack = document.getElementById('goBack');
+      goBack.addEventListener("click", function(evt) { 
+          window.location = "/";
+      });
+
+    </script>
+    <script>
       const btnLogin = document.getElementById('btnLogin');
+      const keypress = document.getElementById('btnLogin');
+      keypress.addEventListener("keyup", function(evt) { 
+        if(evt.keyCode === 13) { 
+          evt.preventDefault();
+          SignIn(); //LoginIn();
+        }  
+      });
       btnLogin.addEventListener("click", function(evt) { 
           evt.preventDefault();
           SignIn(); //LoginIn();
       });
+      
+    
   </script>
     
     <!--<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp" -->
