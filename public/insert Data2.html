@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Add Data</title>
+  </head>
+  <body style="background-color: #E9EFFB;">
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-12">
+          <div class="form h-100">
+            <h3>Add Data Data</h3>
+            <!-- <form class="mb-5" method="post" id="contactForm" name="contactForm"> -->
+              
+              
+                <div class="col-md-12 form-group mb-3">
+                  <label for="ID" class="col-form-label">หมายเลขข้อมูล *</label>
+                  <input type="text" class="form-control" name="ID" id="ID" placeholder="หมายเลขกระบวนการทำงาน" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Name" class="col-form-label">ชื่อข้อมูล *</label>
+                  <input type="text" class="form-control" name="Name" id="Name" placeholder="ชื่อกระบวนการทำงาน" required>
+                </div>
+              
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Datatype" class="col-form-label">ประเภทข้อมูล</label>
+                  <select class="custom-select" id="Datatype" name="Datatype" >
+                          <option selected>---</option>
+                          <option value="เอกสาร">เอกสาร</option>
+                          <option value="ฐานข้อมูลกลาง">ฐานข้อมูลกลาง</option>
+                          <option value="ฐานข้อมูลอื่น ๆ">ฐานข้อมูลอื่น ๆ</option>
+                          <option value="อิเล็กทรอนิกส์ไฟล์">อิเล็กทร๊อนิกส์ไฟล์</option>
+    
+                   </select>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Style" class="col-form-label">ลักษณะการจัดเก็บข้อมูล</label>
+                  <select class="custom-select" id="Style" name="Style" >
+                          <option selected>---</option>
+                          <option value="CSV">CSV</option>
+                          <option value="PDF">PDF</option>
+                          <option value="Excel">Excel</option>
+                          <option value="JPG">JPG</option>
+                          
+                   </select>
+                </div>
+              
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Bussiness" class="col-form-label">กระบวนการทำงานที่เกี่ยวข้อง</label>
+                  <select class="custom-select" id="Bussiness" name="Bussiness" >
+                          <option selected>---</option>
+                          <option value="กระบวนการนักศึกษา">กระบวนการนักศึกษา</option>
+                          <option value="กระบวนการอาจารย์">กระบวนการอาจารย์</option>
+                          <option value="กระบวนการอื่นๆ">กระบวนการอื่นๆ</option>
+                   </select>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Application" class="col-form-label">ระบบสารสนเทศที่เกี่ยวข้อง</label>
+                  <select class="custom-select" id="Application" name="Application" >
+                          <option selected>---</option>
+                          <option value="สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ">สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</option>
+                          <option value="ระบบประกาศผลสอบผ่านเว็บและ SMS">ระบบประกาศผลสอบผ่านเว็บและ SMS</option>
+                          <option value="ข้อมูลบุคลากร">ข้อมูลบุคลากร</option>
+                          <option value="ข้อมูลด้านสวัสดิการ">ข้อมูลด้านสวัสดิการ</option>
+                          <option value="ข้อมูลด้านการเงิน">ข้อมูลด้านการเงิน</option>
+                   </select>
+                </div>
+
+                <div class="col-md-12 form-group mb-3">
+                  <label for="System" class="col-form-label">หน่วยงานที่เกี่ยวข้อง</label>
+                  <select class="custom-select" id="System" name="System" >
+                          <option selected>---</option>
+                          <option value="คณะเทคโนโลยีและการจัดการอุตสาหกรรม">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</option>
+                          <option value="คณะบริหารธุรกิจและอุตสาหกรรมบริการ">คณะบริหารธุรกิจและอุตสาหกรรมบริการ</option>
+                          <option value="คณะอุตสาหกรรมเกษตร">คณะอุตสาหกรรมเกษตร</option>
+                          <option value="กองงาน">กองงาน</option>
+                          <option value="สำนักสำนักหอสมุดกลาง">สำนักสำนักหอสมุดกลาง</option>
+                          <option value="สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ">สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</option>
+                   </select>
+                </div>
+
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Version" class="col-form-label">เวอร์ชั่นของข้อมูล</label>
+                  <input type="text" name="Version" id="Version" class="form-control" placeholder="Version" required/>
+                </div>
+                
+                <div class="col-md-12 form-group mb-3">
+                  <label for="responsible" class="col-form-label">ผู้รับผิดชอบ *</label>
+                  <input type="text" class="form-control" name="responsible" id="responsible" placeholder="ผู้รับผิดชอบ" required>
+                </div>
+   
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Detail" class="col-form-label">รายละเอียดเพิ่มเติม *</label>
+                  <textarea class="form-control" name="Detail" id="Detail" cols="30" rows="4"  placeholder="Write your message"></textarea>
+                </div>
+              
+              
+
+                <button class="btn btn-lg btn-primary btn-block" onclick="insertData();">Add New Data</button>
+                <button class="btn btn-lg btn-light btn-block" onclick="history.back();">Cancel</button>
+                <!-- <div class="col-md-12 form-group">
+                  <input type="submit" value="Add New Data" onclick="insertTable();" class="btn btn-primary btn-lg btn-block">
+                  <span class="submitting"></span>
+                </div> -->
+              
+            <!-- </form> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+  <script  src="/__/firebase/init.js?useEmulator=true"></script>
+  <script  src="./Authentication/js/config.js"></script>
+  <script  src="./Authentication/js/insert.js"></script>
+    
+    
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/jquery.validate.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+
+  </body>
+</html>

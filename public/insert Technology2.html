@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Add Data Technology</title>
+  </head>
+  <body style="background-color: #E9EFFB;">
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-12">
+          <div class="form h-100">
+            <h3>Add Data Technology</h3>
+            <!-- <form class="mb-5" method="post" id="contactForm" name="contactForm"> -->
+              
+              
+                <div class="col-md-12 form-group mb-3">
+                  <label for="ID" class="col-form-label">หมายเลขอุปกรณ์ *</label>
+                  <input type="text" class="form-control" name="ID" id="ID" placeholder="หมายเลขอุปกรณ์" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Name" class="col-form-label">ชื่ออุปกรณ์ *</label>
+                  <input type="text" class="form-control" name="Name" id="Name" placeholder="ชื่ออุปกรณ์" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Brand" class="col-form-label">ยี่ห้ออุปกรณ์ *</label>
+                  <input type="text" class="form-control" name="Brand" id="Brand" placeholder="ยี่ห้ออุปกรณ์" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Model" class="col-form-label">รุ่นอุปกรณ์ *</label>
+                  <input type="text" class="form-control" name="Model" id="Model" placeholder="รุ่นอุปกรณ์" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Spec" class="col-form-label">สเปคอุปกรณ์ *</label>
+                  <textarea class="form-control" name="Spec" id="Spec" cols="30" rows="4"  placeholder="สเปคอุปกรณ์"></textarea>
+                </div>
+                
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Quantity" class="col-form-label">จำนวน *</label>
+                  <input type="number" class="form-control" name="Quantity" id="Quantity" placeholder="จำนวน" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Operating_system" class="col-form-label">ระบบปฎิบัติการ *</label>
+                  <input type="text" class="form-control" name="Operating_system" id="Operating_system" placeholder="ระบบปฎิบัติการ" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Memory" class="col-form-label">ความจำของอุปกรณ์(RAM) *</label>
+                  <input type="text" class="form-control" name="Memory" id="Memory" placeholder="ความจำของอุปกรณ์ (RAM)" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Storage" class="col-form-label">ความจุอุปกรณ์ (Storage) *</label>
+                  <input type="text" class="form-control" name="Storage" id="Storage" placeholder="ความจุอุปกรณ์ (Storage)" required>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Application" class="col-form-label">ระบบสารสนเทศที่เกี่ยวข้อง</label>
+                  <select class="custom-select" id="Application" name="Application" >
+                          <option selected>---</option>
+                          <option value="สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ">สำนักคอมพิวเตอร์และเทคโนโลยีสารสนเทศ</option>
+                          <option value="ระบบสารสนเทศเพื่องานทะเบียนนักศึกษา (KLOGIC , KRIS)">ระบบสารสนเทศเพื่องานทะเบียนนักศึกษา (KLOGIC , KRIS)</option>
+                          <option value="ICIT Account">ICIT Account</option>
+                          <option value="ระบบเครือข่ายงานวิจัยเพื่ออุตสาหกรรม มจพ.">ระบบเครือข่ายงานวิจัยเพื่ออุตสาหกรรม มจพ.</option>
+                          <option value="Cisco Prime">Cisco Prime</option>
+                   </select>
+                </div>
+                
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Location" class="col-form-label">สถานที่ตั้ง</label>
+                  <select class="custom-select" id="Location" name="Location" >
+                          <option selected>---</option>
+                          <option value="สำนักคอมฯ (กทม.)">สำนักคอมฯ (กทม.)</option>
+                          <option value="วิทยาเขตระยอง">วิทยาเขตระยอง</option>
+                          <option value="วิทยาเขตปราจีนบุรี">วิทยาเขตปราจีนบุรี</option>
+                          
+                   </select>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Detail" class="col-form-label">รายละเอียด *</label>
+                  <textarea class="form-control" name="Detail" id="Detail" cols="30" rows="4"  placeholder="รายละเอียด"></textarea>
+                </div>
+
+                <div class="col-md-12 form-group mb-3">
+                  <label for="Type" class="col-form-label">ประเภทอุปกรณ์</label>
+                  <select class="custom-select" id="Type" name="Type" >
+                          <option selected>---</option>
+                          <option value="เครื่องแม่ข่าย">เครื่องแม่ข่าย</option>
+                          <option value="อุปกรณ์">อุปกรณ์</option>
+                  </select>
+                </div>
+              
+                <button class="btn btn-lg btn-primary btn-block" onclick="insertTech();">Add New Data</button>
+                <button class="btn btn-lg btn-light btn-block" onclick="history.back();">Cancel</button>
+                <!-- <div class="col-md-12 form-group">
+                  <input type="submit" value="Add New Data" onclick="insertTable();" class="btn btn-primary btn-lg btn-block">
+                  <span class="submitting"></span>
+                </div> -->
+              
+            <!-- </form> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+  <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+  <script  src="/__/firebase/init.js?useEmulator=true"></script>
+  <script  src="./Authentication/js/config.js"></script>
+  <script  src="./Authentication/js/insert.js"></script>
+    
+    
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/jquery.validate.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+
+  </body>
+</html>

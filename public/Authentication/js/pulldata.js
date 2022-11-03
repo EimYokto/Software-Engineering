@@ -41,9 +41,9 @@ db.ref(App).on("value",function(snapshot){
         trdata1 += "<td>" + rec.Detail + "</td>";
         trdata1 += "<td>" + rec.Version + "</td>";
         trdata1 += "<td>" + rec.responsible + "</td>";
-        trdata += "<td>";
-        trdata += "<a class='btn-sm btn-info' href='edit App.html?id=" + key + "'>Edit</a>";
-        trdata += "</td>";
+        trdata1 += "<td>";
+        trdata1 += "<a class='btn-sm btn-info' href='edit App.html?id=" + key + "'>Edit</a>";
+        trdata1 += "</td>";
         trdata1 += "</tr>";
     }
     document.getElementById('tdata1').innerHTML = trdata1;
@@ -51,6 +51,7 @@ db.ref(App).on("value",function(snapshot){
 },function(err){
     window.alert(err.message);
 });
+
 
 db.ref(Data).on("value",function(snapshot){
     var result = snapshot.val();
@@ -69,6 +70,9 @@ db.ref(Data).on("value",function(snapshot){
         trdata2 += "<td>" + rec.Detail + "</td>";
         trdata2 += "<td>" + rec.Version + "</td>";
         trdata2 += "<td>" + rec.responsible + "</td>";
+        trdata2 += "<td>";
+        trdata2 += "<a class='btn-sm btn-info' href='edit Data.html?id=" + key + "'>Edit</a>";
+        trdata2 += "</td>";
         trdata2 += "</tr>";
     }
     document.getElementById('tdata2').innerHTML = trdata2;
@@ -96,7 +100,10 @@ db.ref(Tech).on("value",function(snapshot){
         trdata3 += "<td>" + rec.Application + "</td>";
         trdata3 += "<td>" + rec.Location + "</td>";
         trdata3 += "<td>" + rec.Detail + "</td>";
-        trdata3 += "<td>" + rec.Type + "</td>"
+        trdata3 += "<td>" + rec.Type + "</td>";
+        trdata3 += "<td>";
+        trdata3 += "<a class='btn-sm btn-info' href='edit Tech.html?id=" + key + "'>Edit</a>";
+        trdata3 += "</td>";
         trdata3 += "</tr>";
     }
     document.getElementById('tdata3').innerHTML = trdata3;

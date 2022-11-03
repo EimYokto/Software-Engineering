@@ -15,6 +15,7 @@ function insertTable() {
     })
     .catch(function(err){
         window.alert(err.message);
+        window.location = "../Authentication/Bussiness.html"
     });
 
     
@@ -35,7 +36,7 @@ function insertApp() {
     db.ref(App).push({"ID":ID,"Name":Name,"Language":Language,"Data":Data,"Year":Year,"Bussiness":Bussiness,"System":System,"Detail":Detail,"Version":Version,"responsible":responsible})
     .then(function xxx(){
         window.alert("Success");
-        window.location = "/";
+        window.location = "../Authentication/Application.html";
     })
     .catch(function(err){
         window.alert(err.message);
@@ -60,7 +61,7 @@ function insertData() {
     db.ref(Data).push({"ID":ID,"Name":Name,"Datatype":Datatype,"Style":Style,"Bussiness":Bussiness,"Application":Application,"System":System,"Detail":Detail,"Version":Version,"responsible":responsible})
     .then(function xxx(){
         window.alert("Success");
-        window.location = "/";
+        window.location = "../Authentication/data.html";
     })
     .catch(function(err){
         window.alert(err.message);
@@ -86,7 +87,7 @@ function insertTech() {
     db.ref(Tech).push({"ID":ID,"Name":Name,"Brand":Brand,"Model":Model,"Spec":Spec,"Quantity":Quantity,"Operating_system":Operating_system,"Memory":Memory,"Storage":Storage,"Application":Application,"Location":Location,"Detail":Detail,"Type":Type})
     .then(function xxx(){
         window.alert("Success");
-        window.location = "/";
+        window.location = "../Authentication/Technology.html";
     })
     .catch(function(err){
         window.alert(err.message);

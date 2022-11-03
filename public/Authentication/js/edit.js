@@ -29,10 +29,10 @@ function edit() {
     const Detail = document.getElementById('Detail').value;
     const responsible = document.getElementById('responsible').value;
 
-    db.ref(Bussiness_1).push({"ID":ID,"Name":Name,"Type":Type,"System":System,"Application":Application,"Version":Version,"Detail":Detail,"responsible":responsible})    
+    db.ref(TABLE).push({"ID":ID,"Name":Name,"Type":Type,"System":System,"Application":Application,"Version":Version,"Detail":Detail,"responsible":responsible})    
     .then(() => {
         alert("Edit data successfully");
-      window.location = "/Authentication/home.html";
+      window.location = "../home.html";
     })
     .catch(error => {
         alert(error.message);
@@ -45,40 +45,47 @@ function edit() {
 
 //--App---//
 
-// db.ref(App).child(ID).once('value')
-// .then((snapshot) => {
-//   var result = snapshot.val();
-//   document.getElementById("ID").value = ID;
-//   document.getElementById("Name").value = result.Name;
-//   document.getElementById("Language").value = result.Language;
-//   document.getElementById("Data").value = result.Data;
-//   document.getElementById("Year").value = result.Year;
-//   document.getElementById("Bussiness").value = result.Bussiness;
-//   document.getElementById("System").value = result.System;
-//   document.getElementById("Detail").value = result.Detail;
-//   document.getElementById("Version").value = result.Version;
-//   document.getElementById("responsible").value = result.responsible;
-// }).catch( (err) => {
-//   alert(err.message);
-// });
+db.ref(App).child(ID).once('value')
+.then((snapshot) => {
+  var result = snapshot.val();
+  document.getElementById("ID").value = ID;
+  document.getElementById("Name").value = result.Name;
+  document.getElementById("Language").value = result.Language;
+  document.getElementById("Data").value = result.Data;
+  document.getElementById("Year").value = result.Year;
+  document.getElementById("Bussiness").value = result.Bussiness;
+  document.getElementById("System").value = result.System;
+  document.getElementById("Detail").value = result.Detail;
+  document.getElementById("Version").value = result.Version;
+  document.getElementById("responsible").value = result.responsible;
+}).catch( (err) => {
+  alert(err.message);
+});
 
-// function edit1() {
-//     const id = document.getElementById('id').value;
-//     const name = document.getElementById('name').value;
-//     const tel = document.getElementById('tel').value;
-//     var rdSect = document.getElementsByName('sect');
-//     var sect;
-//     for(i=0; i<rdSect.length; i++)
-//       if(rdSect[i].checked) sect = rdSect[i].value;      
-//     db.ref(TABLE + "/" + id).update({"name":name, "sect":sect, "tel":tel})
-//     .then(() => {
-//       alert("Edit data successfully");
-//       window.location = "index.html";
-//     })
-//     .catch(error => {
-//         alert(error.message);
-//     });
-// }
+function edit1() {
+    const ID = document.getElementById('ID').value;
+    const Name = document.getElementById('Name').value;
+    const Language = document.getElementById('Language').value;
+    const Data = document.getElementById('Data').value;
+    const Year = document.getElementById('Year').value;
+    const Bussiness = document.getElementById('Bussiness').value;
+    const System = document.getElementById('System').value;
+    const Detail = document.getElementById('Detail').value;
+    const Version = document.getElementById('Version').value;
+    const responsible = document.getElementById('responsible').value;
+
+
+         
+    db.ref(App + "/" + id).update({"ID":ID, "Name":Name, "Language":Language, "Data":Data, "Year":Year, 
+    "Bussiness":Bussiness, "System":System, "Detail":Detail, "Version":Version,"responsible":responsible})
+    .then(() => {
+      alert("Edit data successfully");
+      window.location = "../Application.html";
+    })
+    .catch(error => {
+        alert(error.message);
+    });
+}
 
 
 
