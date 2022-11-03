@@ -42,7 +42,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
-  </head>
+  
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+        
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #fff;
+        }
+        </style>
+
+
+
+
+
+
+</head>
   <body>
   <!--<div class="container">
     <p style="text-align: right;">
@@ -80,15 +123,21 @@
                     <a href="#Ralation_TableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Relation Table</a>
                     <ul class="collapse list-unstyled" id="Ralation_TableSubmenu">
                         <li>
-                            <a href="#">Business</a>
+                            <a href="./RelationBus.html">Business</a>
                         </li>
                         <li>
-                            <a href="#">Application</a>
+                            <a href="./RelationApp.html">Application</a>
                         </li>
                         <li>
-                            <a href="#">Data</a>
+                            <a href="./RelationData.html">Data</a>
                         </li>
+                        <li>
+                          <a href="./RelationTeh.html">Techolgy</a>
+                      </li>
                     </ul>
+                    <li>
+                        <a href="./เอกสารอ้างอิง.html">เอกสารอ้างอิง</a>
+                    </li>
                 </li>
             </ul>
             <ul class="list-unstyled CTAs">
@@ -114,9 +163,9 @@
             </nav>
             <h2>&nbspEA Admin Enterprise</h2>
             <a href="../insert Bussiness.html" class="btn btn-success" role="button">+ Add Data</a><p></p>
-            <table id="example" class="display nowrap" style="width:100%">
-                <thead>
-                    <tr>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+              <table id="myTable">
+                <tr class="header">
                             <th>หมายเลขกระบวนการทำงาน</th>
                             <th>ชื่อกระบวนการทำงาน</th>
                             <th>ประเภทกระบวนการทำงาน</th>
@@ -128,7 +177,7 @@
                             <th>Action</th>
 
                     </tr>
-                </thead>
+                
                 
                 <tbody id="tdata"></tbody>
                 
@@ -137,6 +186,38 @@
         </div>
         
       </div>
+
+      <script>
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[7];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+      </script>
 
      
       <!-- jQuery CDN - Slim version (=without AJAX) -->

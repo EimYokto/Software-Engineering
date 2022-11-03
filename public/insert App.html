@@ -15,10 +15,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   <body>
-
     <div class="container">
       <h2>Add Data Application</h2><p></p>
-      <input type="hidden" name="ID" id="ID"/>
       <div class="form-group">
           <label for="ID">หมายเลขระบบสารสนเทศ</label>
           <input type="text" name="ID" id="ID" class="form-control-sm"/>
@@ -59,7 +57,7 @@
         <label for="responsible">ผู้รับผิดชอบ</label>
         <input type="text" name="responsible" id="responsible" class="form-control-sm"/>
       </div>
-        <button class="btn btn-sm btn-primary" onclick="edit();">Edit</button>
+        <button class="btn btn-sm btn-primary" onclick="insertApp();">Add New Data</button>
         
       </div>
 
@@ -72,7 +70,6 @@
 <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
 <script  src="/__/firebase/init.js?useEmulator=true"></script>
 <script  src="./Authentication/js/config.js"></script>
-
-<script src="./Authentication/js/edit.js"></script> 
+<script  src="./Authentication/js/insert.js"></script>
   </body>
 </html>

@@ -42,7 +42,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
-
     <style>
         * {
           box-sizing: border-box;
@@ -76,11 +75,10 @@
         }
         
         #myTable tr.header, #myTable tr:hover {
-          background-color: #fff;
-          
+            background-color: #fff;
         }
         </style>
-  </head>
+</head>
   <body>
   <!--<div class="container">
     <p style="text-align: right;">
@@ -101,19 +99,8 @@
             
             <ul class="list-unstyled components">
                 <!--<p>Old man</p>-->
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Business</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">กระบวนการนักศึกษา</a>
-                        </li>
-                        <li>
-                            <a href="#">กระบวนการอาจารย์</a>
-                        </li>
-                        <li>
-                            <a href="#">กระบวนการอื่นๆ</a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href="home.html">Bussiness</a>
                 </li>
                 <li>
                     <a href="Application.html">Application</a>
@@ -128,20 +115,28 @@
                     <a href="#Ralation_TableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Relation Table</a>
                     <ul class="collapse list-unstyled" id="Ralation_TableSubmenu">
                         <li>
-                            <a href="#">Business</a>
+                            <a href="./RelationBus.html">Business</a>
+                  </li>
+                  <li>
+                      <a href="./RelationApp.html">Application</a>
+                  </li>
+                  <li>
+                      <a href="./RelationData.html">Data</a>
+                  </li>
+                  <li>
+                    <a href="./RelationTeh.html">Techolgy</a>
                         </li>
-                        <li>
-                            <a href="#">Application</a>
+                        
+                    </ul><li>
+                            <a href="./เอกสารอ้างอิง.html">เอกสารอ้างอิง</a>
                         </li>
-                        <li>
-                            <a href="#">Data</a>
-                        </li>
+                </li>
                     </ul>
                 </li>
             </ul>
             <ul class="list-unstyled CTAs">
               <li>
-                  <a href="login.html" class="download" onclick="logout();">Logout</a>
+                <a href="login.html" class="download" onclick="logout();">Logout</a>
               </li>
           </ul>
 
@@ -162,6 +157,8 @@
             </nav>
             <h2>&nbspEA Admin Enterprise</h2>
             <a href="../insert Data2.html" class="btn btn-success" role="button">+ Add Data</a><p></p>
+            
+                    <tr>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
                 <table id="myTable">
                     <tr class="header">
@@ -177,6 +174,8 @@
                             <th>ผู้รับผิดชอบ</th>
                             <th>Action</th>
                     </tr>
+                
+                
                     <tbody id="tdata2"></tbody>
                
 
@@ -184,6 +183,37 @@
         </div>
         
       </div>
+      <script>
+        function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[7];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }       
+        }
+        }
+      </script>
 
      
       <!-- jQuery CDN - Slim version (=without AJAX) -->

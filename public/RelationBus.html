@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Software Engineering CED</title>
+    <link rel="stylesheet" href="./Authentication/popup.css">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.10.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  </head>
+  
+    <body style="background-color: #E9EFFB;">
+      <div class="wrapper">
+          <!-- Sidebar -->
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                <a href="index.html">
+                    <img src="./1.png" alt="profile_picture" width="200">    
+                </a>
+              </div>
+              
+              <ul class="list-unstyled components">
+                  <!--<p>Old man</p>-->
+                  <li>
+                        <a href="index.html">Bussiness</a>
+                    </li>
+                  <li>
+                      <a href="Application.html">Application</a>
+                  </li>
+                  <li>
+                      <a href="data.html">Data</a>
+                  </li>
+                  <li>
+                      <a href="Techolgy.html">Techolgy</a>
+                  </li>
+                  <li class="active">
+                      <a href="#Ralation_TableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ralation Table</a>
+                      <ul class="collapse list-unstyled" id="Ralation_TableSubmenu">
+                          <li>
+                            <a href="./RelationBus.html">Business</a>
+                        </li>
+                        <li>
+                            <a href="./RelationApp.html">Application</a>
+                        </li>
+                        <li>
+                            <a href="./RelationData.html">Data</a>
+                        </li>
+                        <li>
+                          <a href="./RelationTeh.html">Techolgy</a>
+                        </li>
+                      </ul>
+                      <li>
+                        <a href="./เอกสารอ้างอิง.html">เอกสารอ้างอิง</a>
+                    </li>
+                  </li>
+              </ul>
+              <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="Authentication/login.html" class="download">Login</a>
+                </li>
+            </ul>
+          </nav>
+                        <!-- Page Content  -->
+          <div id="content">
+
+              <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #616A8B;">
+                  
+                  <div class="container-fluid">
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="nav navbar-nav ml-auto">
+                              <h2 style="color:#fff ;">Enterprise Architecture</h2>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+              <div>
+                <table id="example" class="display nowrap" style="width:100%">
+                  <thead>
+                      <tr>
+                              <th>หมายเลขเอกสาร</th>
+                              <th>ชื่อเอกสาร</th>
+                      </tr>
+                  </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td><a href="./table1.html" style="color:#000 ;">ระบบงานการองค์กรและธรรมชาติ</a></td>
+                          </tr>
+                          <tr>
+                              <td>2</td>
+                              <td><a href="./table1.1.html" style="color:#000 ;">ระบบงานหลัก</a></td>
+                          </tr>
+                          <tr>
+                              <td>3</td>
+                              <td><a href="./table1.2.html" style="color:#000 ;">ระบบงานสนับสนุน</a></td>
+                          </tr>
+                      </tbody>
+                </table>
+
+              </div>
+              
+          
+        
+          </div>
+        </div>
+
+
+      
+
+  
+  
+  
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <script type="text/JavaScript"src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js" ></script>
+  <script type="text/JavaScript"src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js" ></script>
+
+  <script type="text/JavaScript">
+    $(document).ready(function() {
+$('#example').DataTable( {
+    
+} );
+} );
+</script>
+
+    <script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+    <script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+    <script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+    <script  src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="./Authentication/js/config.js"></script>
+    <script src="./Authentication/js/pulldata.js"></script>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+
+        }
+
+        function closePopup(){
+            popup.classList.remove("open-popup");
+            
+        }
+
+
+
+    </script>
+
+  </body>
+</html>
