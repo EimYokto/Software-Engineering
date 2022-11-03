@@ -16,6 +16,44 @@
         <!-- Font Awesome JS -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            #myInput {
+              background-image: url('/css/searchicon.png');
+              background-position: 10px 10px;
+              background-repeat: no-repeat;
+              width: 100%;
+              font-size: 16px;
+              padding: 12px 20px 12px 40px;
+              border: 1px solid #ddd;
+              margin-bottom: 12px;
+            }
+            
+            #myTable {
+              border-collapse: collapse;
+              width: 100%;
+              border: 1px solid #ddd;
+              font-size: 18px;
+            }
+            
+            #myTable th, #myTable td {
+              text-align: left;
+              padding: 12px;
+            }
+            
+            #myTable tr {
+              border-bottom: 1px solid #ddd;
+            }
+            
+            #myTable tr.header, #myTable tr:hover {
+              background-color: #fff;
+              
+            }
+            </style>
     </head>
 
     <body style="background-color: #E9EFFB;">
@@ -89,9 +127,9 @@
                     </div>
                 </nav>
                 <h2>&nbspData</h2>
-                <table id="example" class="display nowrap" style="width:100%">
-                    <thead>
-                        <tr>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                    <table id="myTable">
+                        <tr class="header">
                             <th>หมายเลขข้อมูล</th>
                             <th>ชื่อข้อมูล</th>
                             <th>ประเภทข้อมูล</th>
@@ -103,7 +141,6 @@
                             <th>เวอร์ชั่นของข้อมูล</th>
                             <th>ผู้รับผิดชอบ</th>
                         </tr>
-                    </thead>
                     <tbody id="tdata2">
                         
                     </tbody>
