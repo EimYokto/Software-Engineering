@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Edit</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        html, body {
+        min-height: 100%;
+        }
+        body, div, form, input, select, p { 
+        padding: 0;
+        margin: 0;
+        outline: none;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 24px;
+        color: #eee;
+        }
+        body {
+        background: url("./KMUTB-zoom-background-scaled.jpg") no-repeat center;
+        background-size: cover;
+        }
+        h1, h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        }
+        h2 {
+        margin: 0 0 0 8px;
+        }
+        .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 25px;
+        background: rgba(0, 0, 0, 0.5); 
+        }
+        .left-part, form {
+        padding: 25px;
+        }
+        .left-part {
+        text-align: center;
+        }
+        .fa-graduation-cap {
+        font-size: 72px;
+        }
+        form {
+        background: rgba(0, 0, 0, 0.7); 
+        }
+        .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+        .info {
+        display: flex;
+        flex-direction: column;
+        }
+        input, select {
+        padding: 5px;
+        margin-bottom: 30px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #eee;
+        }
+        input::placeholder {
+        color: #eee;
+        }
+        option:focus {
+        border: none;
+        }
+        option {
+        background: black; 
+        border: none;
+        }
+        .checkbox input {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        }
+        .checkbox a {
+        color: #26a9e0;
+        }
+        .checkbox a:hover {
+        color: #85d6de;
+        }
+        .btn-item, button {
+        padding: 10px 5px;
+        margin-top: 20px;
+        border-radius: 5px; 
+        border: none;
+        background: #26a9e0; 
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        }
+        .btn-item {
+        display: inline-block;
+        margin: 20px 5px 0;
+        }
+        button {
+        width: 100%;
+        }
+        button:hover, .btn-item:hover {
+        background: #85d6de;
+        }
+        @media (min-width: 568px) {
+        html, body {
+        height: 100%;
+        }
+        .main-block {
+        flex-direction: row;
+        height: calc(100% - 50px);
+        }
+        .left-part, form {
+        flex: 1;
+        height: auto;
+        }
+        }
+      </style>
+  </head>
+  <body>
+      <div class="main-block">
+        <div class="left-part">
+          <i class="fas fa-graduation-cap"></i>
+          <h1>Viwe Data</h1>
+          <p>ข้อมูลของ EA KMUTNB</p>
+          <div class="btn-group">
+            <a class="btn-item" href="index.html"> <span class="material-symbols-outlined">
+                home
+                </span>Home</a>
+            <a class="btn-item" href="./Authentication/login.html"><span class="material-symbols-outlined">
+                login
+                </span>Login</a>
+          </div>
+        </div>
+        <form action="/">
+            <input type="hidden" name="ID" id="ID"/>
+      <!-- <div class="form-group">
+          <label for="ID">หมายเลขกระบวนการทำงาน</label>
+          <input type="text" name="ID" id="ID" class="form-control-sm"/>
+      </div> -->
+      <div class="form-group">
+          <label for="Name">ชื่อกระบวนการทำงาน</label>
+          <select type="text" name="Name" id="Name" class="form-select">
+            <option value="-">-</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+          <!-- <input type="text" name="Name" id="Name" class="form-control-sm"/> -->
+      </div>
+      <div class="form-group">
+          <label for="Type">ประเภทกระบวนการทำงาน</label>
+          <input type="text" name="Type" id="Type" class="form-control-sm"/>
+      </div>
+      <div class="form-group">
+          <label for="System">หน่วยงานที่เกี่ยวข้อง</label>
+          <input type="text" name="System" id="System" class="form-control-sm"/>
+      </div>
+      <div class="form-group">
+          <label for="Application">ระบบสารสนเทศที่เกี่ยวข้อง</label>
+          <input type="text" name="Application" id="Application" class="form-control-sm"/>
+      </div>
+      <div class="form-group">
+        <label for="Version">เวอร์ชั่นของกระบวนการทำงาน</label>
+        <input type="text" name="Version" id="Version" class="form-control-sm"/>
+      </div>
+      <div class="form-group">
+          <label for="Detail">รายละเอียดเพิ่มเติม</label>
+          <input type="text" name="Detail" id="Detail" class="form-control-sm"/>
+      </div>
+      <div class="form-group">
+        <label for="responsible">ผู้รับผิดชอบ</label>
+        <input type="text" name="responsible" id="responsible" class="form-control-sm"/>
+      </div>
+        <a href="home.html?ID" class="btn btn-sm btn-danger" style="font-size: 20px;">Cancel</a>
+        </form>
+      </div>
+
+
+
+   <!-- update the version number as needed -->
+<script  src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
+<script  src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
+<script  src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
+
+<script src="/__/firebase/8.3.2/firebase-app.js"></script>
+<script src="/__/firebase/8.3.2/firebase-database.js"></script>
+
+<script  src="/__/firebase/init.js?useEmulator=true"></script>
+<script  src="./Authentication/js/config.js"></script>
+<script src="./Authentication/js/edit.js"></script>
+  </body>
+</html>
